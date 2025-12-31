@@ -2,18 +2,17 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Charles",
+  lastName: "Wittemann",
+  name: `Charles Wittemann`,
+  role: "Software and Finance Student",
+  avatar: "/images/avatar_v2.jpg",
+  email: "charliewittemann@icloud.com",
+  location: "America/New_York", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Spanish"], // optional: Leave the array empty if you don't want to display languages
 };
-
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -25,13 +24,13 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/charleswittemann23",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/charles-wittemann",
     essential: true,
   },
   {
@@ -44,7 +43,7 @@ const social: Social = [
     name: "Threads",
     icon: "threads",
     link: "https://www.threads.com/@once_ui",
-    essential: true,
+    essential: false,
   },
   {
     name: "Email",
@@ -94,7 +93,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -102,9 +101,8 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Hi, I'm Charlie Wittemann, a UVA student working towards degrees in Computer Science and Finance.
+        In Fall 2025, I worked for the Charlottesville startup Augvu as a Full Stack Developer. This past summer, I worked for Code Platoon, teaching veterans to become software developers. <br/><br/>My professional interests lie in machine learning, leveraging modeling and data analysis to solve complex financial problems.
       </>
     ),
   },
@@ -113,42 +111,37 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Augvu" ,
+        link: "https://www.augvu.com/",
+        timeframe: "August 2025 - Present",
+        role: "Senior Full Stack Developer Intern",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Spearheaded 3-person engineering team of an early-stage startup, building an interactive social media storytelling platform. Delivered enhanced introductory content for Augvu users, cutting down user onboarding time by 90% and increasing user engagement 20%. First time using PHP, Dart, and was quite the challenge.
           </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
+            src: "/images/projects/project-01/augvu-cover.jpeg",
             alt: "Once UI Project",
             width: 16,
-            height: 9,
+            height: 34,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Code Platoon",
+        timeframe: "Summer 2025",
+        role: "Full Stack Teaching Assistant",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Supported instruction and curriculum delivery during a 15-week intensive 
+            full-stack bootcamp training veterans and military spouses in software engineering, 
+            and managed final projects. Really awesome work.
           </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+         
         ],
         images: [],
       },
@@ -159,13 +152,14 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "University of Virginia",
+        description: <>BA in Computer Science. <br/>
+        B.S in Finance with a concentration in Quantitative Finance from the McIntire School of Commerce. Teaching Assistant for CS 3240: Software Engineering
+        <br/><br/><strong>Coursework</strong>: Computer Systems and Organizations, Data Structures and Algorithms, Linear Algebra, Software Engineering, Finance and Quantitative Analysis, Strategy and Systems, Discrete Mathemtatics, Cybersecurity
+        </>,
+        
       },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
+      
     ],
   },
   technical: {
@@ -259,45 +253,26 @@ const gallery: Gallery = {
   // These are placeholder images, replace with your own
   images: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
+      src: "/images/gallery/horizontal-5.jpeg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
+      src: "/images/gallery/horizontal-6.jpeg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
+      src: "/images/gallery/horizontal-7.jpeg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
+      src: "/images/gallery/vertical-1.jpeg",
       alt: "image",
       orientation: "vertical",
     },
+    
   ],
 };
 
