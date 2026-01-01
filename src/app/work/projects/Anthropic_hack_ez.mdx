@@ -1,0 +1,83 @@
+---
+title: "Anthropic Hackathon EZ Grader"
+publishedAt: "2025-12-31"
+summary: "Exploring RAG context use case in course grading"
+images:
+  - "/images/projects/project-01/ah-1.png"
+  - "/images/projects/project-01/ah-4.png"
+  - "/images/projects/project-01/ah-5.png"
+team:
+  - name: "Pranav Kapur"
+    role: "Software Engineer"
+    avatar: "/images/avatar_3.png"
+    linkedIn: "https://www.linkedin.com/in/pranav-kapur-uva/"
+  - name: "Charlie Wittemann"
+    role: "Software Engineer"
+    avatar: "/images/avatar_v2.jpg"
+    linkedIn: "https://www.linkedin.com/charles-wittemann"
+link: "https://anthropic-hackathon-front.vercel.app"
+---
+
+## Overview
+
+EZ Grader is an intelligent grading automation system that leverages Agentic AI and a RAG (Retrieval-Augmented Generation) pipeline to streamline the grading process for educators. Built during the Claude Code for Good Hackathon, this project addresses the time-consuming challenge of grading open-ended assignments and exams by training an LLM on class-specific content to provide detailed, rubric-based feedback.
+
+The system has demonstrated success in evaluating both formulaic and open-ended responses, including complex assignments like discrete math proofs from UVA's hardest CS course and quantitative analysis homework questions.
+
+## Key Features
+
+- **Agentic AI Grading**: Utilizes Anthropic's Claude Haiku 4.5 API with custom system prompt engineering in XML to provide real-time, intelligent feedback on student submissions.
+
+- **RAG Pipeline Integration**: Implements a sophisticated retrieval system that pulls the most semantically relevant textbook chunks related to each question and answer, ensuring grading is contextually accurate and aligned with course material.
+
+- **Automated PDF Ingestion**: Intelligently processes and chunks textbooks using PyPDFLoader, making course content readily available for the grading system.
+
+- **Vector Database Storage**: Employs Voyage AI embedding model to create vector representations of textbook chunks, stored efficiently in ChromaDB for rapid retrieval.
+
+- **Detailed Feedback Generation**: Returns comprehensive feedback on student responses and assigns points based on instructor-provided rubrics, maintaining consistency across all submissions.
+
+- **RESTful API Backend**: Provides real-time feedback through a robust API architecture, ensuring scalable and responsive grading operations.
+
+## Technologies Used
+
+- **Anthropic Claude Haiku 4.5 API**: For intelligent response evaluation and feedback generation
+- **Langchain**: For building the retrieval system and orchestrating the RAG pipeline
+- **PyPDFLoader**: For automated textbook processing and chunking
+- **Voyage AI**: For creating high-quality embeddings of course content
+- **ChromaDB**: Vector database for efficient storage and retrieval of embedded content
+- **RESTful API**: Backend architecture for real-time model requests and feedback delivery
+
+## Demonstration Results
+
+The system successfully graded assignments from two challenging courses:
+
+- **Discrete Math 2 Proof Grading**: Evaluated complex mathematical proofs from what's considered the hardest CS class at UVA, demonstrating the system's ability to handle rigorous logical reasoning.
+
+- **Quantitative Analysis (COMM 3030)**: Assessed open-ended homework questions, showing versatility across different academic disciplines.
+
+*Note: The specificity of rubrics directly impacts grading precision. Well-defined grading requirements produce more consistent and accurate results, while ambiguous criteria may lead to variability.*
+
+## Challenges and Learnings
+
+One of the primary challenges was developing a system that could handle the nuance of open-ended responses while maintaining consistency with instructor expectations. This required careful prompt engineering and iterative refinement of the RAG pipeline to ensure retrieved context was truly relevant to each grading scenario.
+
+Balancing automation with quality control presented another significant challenge. We learned that while the LLM can provide excellent initial grading and feedback, having a faculty review process ensures the system complements rather than replaces human judgment.
+
+The technical complexity of integrating multiple AI systems—from embedding models to vector databases to the Claude API—required careful orchestration to ensure smooth, real-time performance.
+
+## Future Development
+
+### Integration with Learning Management Systems
+
+- **Gradescope and Canvas Integration**: Plans to integrate with major learning management platforms to provide a seamless faculty experience with minimal technical expertise required.
+- **Current Blocker**: API access restrictions from Gradescope and Canvas require partnership discussions with universities or direct collaboration with these companies.
+- **Streamlined Workflow**: Future integration would allow instructors to upload rubrics, receive LLM-generated grades, and monitor results for quality control—all within their existing platforms.
+
+### Student Assistance Features
+
+- **Course-Specific Chatbot**: Extending the RAG pipeline to create an intelligent chatbot that can answer course-specific questions based on lecture materials, textbooks, and course content.
+- **Reduced Office Hours Strain**: By providing instant, accurate answers to common questions, the system could reduce load on Piazza forums and office hours, allowing instructors to focus on more complex student needs.
+
+## Outcome
+
+EZ Grader has proven that AI-powered grading can effectively handle open-ended assignments and exams when paired with well-structured rubrics and course-specific context. The system optimizes the grading workflow for educators while providing students with detailed, constructive feedback. By successfully grading complex assignments across multiple disciplines, this project demonstrates the potential for AI to enhance educational assessment while maintaining academic rigor and fairness.
