@@ -110,7 +110,7 @@ const about: About = {
              Excited to contribute to cutting-edge financial technologies and strategies this coming summer. 
           </>,
         ],
-      }
+      },
       {
         company: "Augvu" ,
         link: "https://www.augvu.com/",
