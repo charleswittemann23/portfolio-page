@@ -104,7 +104,7 @@ const about: About = {
         company: "Goldman Sachs",
         link: "https://www.goldmansachs.com/",
         timeframe: "Incoming Summer 2026",
-        role: "Incoming Summer Analyst - Engineering, Quantitative Strategist",
+        role: "Incoming Engineering Summer Analyst -  Quantitative Strategist, SLC, USA",
         achievements: [
           <>
              Excited to contribute to cutting-edge financial technologies and strategies this coming summer. 
