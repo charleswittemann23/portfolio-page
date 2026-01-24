@@ -101,6 +101,17 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
+        company: "Goldman Sachs",
+        link: "https://www.goldmansachs.com/",
+        timeframe: "Incoming Summer 2026",
+        role: "Incoming Summer Analyst - Engineering, Quantitative Strategist",
+        achievements: [
+          <>
+             Excited to contribute to cutting-edge financial technologies and strategies this coming summer. 
+          </>,
+        ],
+      }
+      {
         company: "Augvu" ,
         link: "https://www.augvu.com/",
         timeframe: "August 2025 - Present",
