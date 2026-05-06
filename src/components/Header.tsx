@@ -166,6 +166,25 @@ export const Header = () => {
                   </Row>
                 </>
               )}
+              {routes["/music"] && (
+                <>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton
+                      prefixIcon="music"
+                      href="/music"
+                      label="Music"
+                      selected={pathname.startsWith("/music")}
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton
+                      prefixIcon="music"
+                      href="/music"
+                      selected={pathname.startsWith("/music")}
+                    />
+                  </Row>
+                </>
+              )}
               {display.themeSwitcher && (
                 <>
                   <Line background="neutral-alpha-medium" vert maxHeight="24" />
