@@ -39,6 +39,15 @@ export async function GET(request: Request) {
 
     const data = await response.json();
 
+    // If this is a setup request, return the refresh token for the user to save
+    if (state === "setup") {
+      return NextResponse.json({
+        success: true,
+        refreshToken: data.refresh_token,
+        message: "Save this refresh token to your .env.local as SPOTIFY_REFRESH_TOKEN",
+      });
+    }
+
     const redirectUrl = `${APP_URL}/music?access_token=${encodeURIComponent(
       data.access_token
     )}&success=true`;

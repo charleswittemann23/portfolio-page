@@ -1,14 +1,13 @@
 "use client";
 
-import { Flex, Heading, Text, Column, Button } from "@once-ui-system/core";
-import { useEffect, useState, useCallback } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { Flex, Heading, Text, Column } from "@once-ui-system/core";
+import { useEffect, useState } from "react";
 
 interface Album {
+  id: string;
   name: string;
   images: { url: string; width: number; height: number }[];
   artists: { name: string }[];
-  id: string;
   playCount: number;
 }
 
@@ -16,62 +15,28 @@ export default function MusicView() {
   const [albums, setAlbums] = useState<Album[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const accessToken = searchParams.get("access_token");
-  const authError = searchParams.get("error");
-
-  const fetchAlbums = useCallback(async (token: string) => {
-    console.log("Fetching albums with token:", token.substring(0, 20) + "...");
-    try {
-      const response = await fetch("/api/spotify/top-albums", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      console.log("Response status:", response.status);
-      const data = await response.json();
-      console.log("Response data:", data);
-
-      if (!response.ok) {
-        if (response.status === 401) {
-          setError(null);
-          return;
-        }
-        throw new Error(data.error || "Failed to fetch albums");
-      }
-
-      setAlbums(data.albums);
-    } catch (err) {
-      console.error("Fetch error:", err);
-      setError(err instanceof Error ? err.message : "Unknown error");
-    } finally {
-      setLoading(false);
-    }
-  }, []);
 
   useEffect(() => {
-    if (accessToken) {
-      // Store token in sessionStorage for persistence
-      sessionStorage.setItem("spotify_access_token", accessToken);
-      // Remove token from URL for security
-      router.replace("/music");
-      // Fetch albums with the token
-      fetchAlbums(accessToken);
-    } else {
-      // Check sessionStorage for existing token
-      const storedToken = sessionStorage.getItem("spotify_access_token");
-      if (storedToken) {
-        fetchAlbums(storedToken);
-      } else {
+    async function fetchAlbums() {
+      try {
+        const response = await fetch("/api/spotify/top-albums-public");
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.error || "Failed to fetch albums");
+        }
+
+        setAlbums(data.albums || []);
+      } catch (err) {
+        console.error("Fetch error:", err);
+        setError(err instanceof Error ? err.message : "Unknown error");
+      } finally {
         setLoading(false);
       }
     }
-  }, [accessToken, router, fetchAlbums]);
 
-  const handleConnect = () => {
-    window.location.href = "/api/spotify/auth";
-  };
+    fetchAlbums();
+  }, []);
 
   if (loading) {
     return (
@@ -87,16 +52,29 @@ export default function MusicView() {
   if (error) {
     return (
       <Flex direction="column" gap="24" paddingX="24" paddingY="32">
-        <Heading as="h1" size="xl">
-          Top Albums
-        </Heading>
-        <Text onBackground="danger-medium">Error: {error}</Text>
+        <Flex direction="column" gap="8">
+          <Heading as="h1" size="xl">
+            Top Albums
+          </Heading>
+          <Text onBackground="neutral-medium">
+            My most played albums this month
+          </Text>
+        </Flex>
+        <Text onBackground="neutral-medium" size="s">
+          {error}
+        </Text>
+        <Text onBackground="neutral-medium" size="xs">
+          To set up Spotify integration,{" "}
+          <a href="/api/spotify/setup-auth" style={{ textDecoration: "underline" }}>
+            authorize here
+          </a>{" "}
+          and save the refresh token to your .env.local as SPOTIFY_REFRESH_TOKEN
+        </Text>
       </Flex>
     );
   }
 
-  // Not authenticated - show connect button
-  if (albums.length === 0 || authError) {
+  if (!albums || albums.length === 0) {
     return (
       <Flex direction="column" gap="24" paddingX="24" paddingY="32">
         <Flex direction="column" gap="8">
@@ -104,18 +82,19 @@ export default function MusicView() {
             Top Albums
           </Heading>
           <Text onBackground="neutral-medium">
-            Connect your Spotify account to see your most played albums this month
+            My most played albums this month
           </Text>
         </Flex>
-
-        <Column gap="16" style={{ alignItems: "flex-start" }}>
-          <Button prefixIcon="music" onClick={handleConnect}>
-            Connect Spotify
-          </Button>
-          <Text onBackground="neutral-medium" size="xs">
-            Your listening data is stored securely and never shared
-          </Text>
-        </Column>
+        <Text onBackground="neutral-medium" size="s">
+          No albums found.
+        </Text>
+        <Text onBackground="neutral-medium" size="xs">
+          To set up Spotify integration,{" "}
+          <a href="/api/spotify/setup-auth" style={{ textDecoration: "underline" }}>
+            authorize here
+          </a>{" "}
+          and save the refresh token to your .env.local as SPOTIFY_REFRESH_TOKEN
+        </Text>
       </Flex>
     );
   }
@@ -195,7 +174,7 @@ export default function MusicView() {
       </Flex>
 
       <Text onBackground="neutral-medium" size="xs">
-        Data from Spotify • Updated monthly
+        Data from Spotify • Updated daily
       </Text>
     </Flex>
   );
