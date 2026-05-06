@@ -137,7 +137,7 @@ export default function MusicView() {
             key={album.id}
             gap="16"
             padding="16"
-            borderRadius="m"
+            radius="m"
             style={{
               alignItems: "center",
               background: "var(--static-surface-overlay)",
@@ -167,7 +167,7 @@ export default function MusicView() {
                 left="-8px"
                 width="24px"
                 height="24px"
-                borderRadius="full"
+                radius="full"
                 style={{
                   alignItems: "center",
                   justifyContent: "center",
