@@ -60,7 +60,7 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "/work/Anthropic_hack_ez",
+    href: "/work/rag_anthro_hack_grade",
   },
   subline: (
     <>
@@ -179,20 +179,7 @@ const about: About = {
           },
         ],
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
         title: "Next.js",
@@ -252,6 +239,21 @@ const gallery: Gallery = {
   description: `A photo collection by ${person.name}`,
   
   images: [
+    {
+      src: "/images/gallery/carters_26.jpeg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/cabin_1.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/cabin_2.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
     {
       src: "/images/gallery/horizontal-5.jpeg",
       alt: "image",
