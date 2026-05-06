@@ -162,13 +162,13 @@ export default function MusicView() {
                 }}
               />
               <Flex
-                position="absolute"
-                top="-8px"
-                left="-8px"
-                width="24px"
-                height="24px"
                 radius="full"
                 style={{
+                  position: "absolute",
+                  top: "-8px",
+                  left: "-8px",
+                  width: "24px",
+                  height: "24px",
                   alignItems: "center",
                   justifyContent: "center",
                   background: index === 0 ? "#1DB954" : index === 1 ? "#535353" : "#B3B3B3",
