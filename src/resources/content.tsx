@@ -114,7 +114,7 @@ const about: About = {
       {
         company: "Augvu" ,
         link: "https://www.augvu.com/",
-        timeframe: "August 2025 - Present",
+        timeframe: "August 2025 - January 2026",
         role: "Senior Full Stack Developer Intern",
         achievements: [
           <>
@@ -156,7 +156,7 @@ const about: About = {
         name: "University of Virginia",
         description: <>BA in Computer Science. <br/>
         B.S in Finance with a concentration in Quantitative Finance from the McIntire School of Commerce. Teaching Assistant for CS 3240: Software Engineering
-        <br/><br/><strong>Coursework</strong>: Computer Systems and Organizations, Data Structures and Algorithms, Linear Algebra, Software Engineering, Finance and Quantitative Analysis, Strategy and Systems, Discrete Mathemtatics, Cybersecurity
+        <br/><br/><strong>Coursework</strong>: Computer Systems and Organizations, Data Structures and Algorithms, Linear Algebra, Software Engineering, Corporate Finance, Quantitative Analysis, Strategy and Systems, Discrete Mathemtatics, Cybersecurity
         </>,
         
       },
