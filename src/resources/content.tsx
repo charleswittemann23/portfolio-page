@@ -168,37 +168,24 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Financial Analysis",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Comfortable analyzing financial data, building valuation models, quantifying risk, modern portfolio theory, and equity research. Excel, R, Python, Powerpoint, CapIQ, market making.</>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          
         ],
         // optional: leave the array empty if you don't want to display images
         images: [],
       },
       {
-        title: "Next.js",
+        title: "Analytics, data, programming, and machine learning.",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Most comfortable programming in python and javascript, but also experienced with R, Flutter, PHP, and dart. Experience using NumPy, pandas.
+          Comfortable using git, django, SQL, AWS, and Heroku.</>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
@@ -217,7 +204,7 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "My ruminations and writings",
+  title: "Continuing to keep my writing skills sharp and share my thoughts on my passions.",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
