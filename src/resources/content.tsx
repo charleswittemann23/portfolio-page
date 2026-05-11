@@ -157,6 +157,7 @@ const about: About = {
         description: <>BA in Computer Science. <br/>
         B.S in Finance with a concentration in Quantitative Finance from the McIntire School of Commerce. Teaching Assistant for CS 3240: Software Engineering
         <br/><br/><strong>Coursework</strong>: Computer Systems and Organizations, Data Structures and Algorithms, Linear Algebra, Software Engineering, Corporate Finance, Quantitative Analysis, Strategy and Systems, Discrete Mathemtatics, Cybersecurity
+        <br/><br/>Dean's List for 5 semesters. President of InterVarsity Christian Fellowship, Club Roundnet Member
         </>,
         
       },
@@ -204,7 +205,7 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Continuing to keep my writing skills sharp and share my thoughts on my passions.",
+  title: "Continuing to keep my writing skills sharp and share my passions.",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
