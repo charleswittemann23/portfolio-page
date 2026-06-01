@@ -221,7 +221,7 @@ const gallery: Gallery = {
   
   images: [
     {
-      src: "/images/gallery/carters_26.jpeg",
+      src: "/images/gallery/orca.jpeg",
       alt: "image",
       orientation: "horizontal",
     },
