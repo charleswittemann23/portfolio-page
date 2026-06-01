@@ -106,9 +106,7 @@ const about: About = {
         timeframe: "Incoming Summer 2026",
         role: "Incoming Engineering Summer Analyst -  Quantitative Strategist, SLC, USA",
         achievements: [
-          <>
-             Excited to contribute to cutting-edge financial technologies and strategies this coming summer. 
-          </>,
+          "Excited to contribute to cutting-edge financial technologies and strategies this coming summer.",
         ],
       },
       {
@@ -117,9 +115,8 @@ const about: About = {
         timeframe: "August 2025 - January 2026",
         role: "Senior Full Stack Developer Intern",
         achievements: [
-          <>
-            Spearheaded 3-person engineering team of an early-stage startup, building an interactive social media storytelling platform. Delivered enhanced introductory content for Augvu users, cutting down user onboarding time by 90% and increasing user engagement 20%. First time using PHP, Dart, and was quite the challenge.
-          </>,
+          "Spearheaded 3-person engineering team of an early-stage startup, building an interactive social media storytelling platform. Delivered enhanced introductory content for Augvu users, cutting down user onboarding time by 90% and increasing user engagement 20%. First time using PHP, Dart, and was quite the challenge."
+            ,
           
         ],
         images: [
@@ -137,12 +134,8 @@ const about: About = {
         timeframe: "Summer 2025",
         role: "Full Stack Teaching Assistant",
         achievements: [
-          <>
-            Supported instruction and curriculum delivery during a 15-week intensive 
-            full-stack bootcamp training veterans and military spouses in software engineering, 
-            and managed final projects. Really awesome work.
-          </>,
-         
+          "Supported instruction and curriculum delivery during a 15-week intensive full-stack bootcamp training veterans and military spouses in software engineering, and managed final projects. Really awesome work."
+          ,         
         ],
         images: [],
       },
@@ -155,7 +148,7 @@ const about: About = {
       {
         name: "University of Virginia",
         description: <>BA in Computer Science. <br/>
-        B.S in Finance with a concentration in Quantitative Finance from the McIntire School of Commerce. Teaching Assistant for CS 3240: Software Engineering
+        B.S in Finance with a concentration in Quantitative Finance from the McIntire School of Commerce. <br/>Research and Teaching Assistant for Director of AI Research, Ryan Wright<br/> Teaching Assistant for CS 3240: Software Engineering
         <br/><br/><strong>Coursework</strong>: Computer Systems and Organizations, Data Structures and Algorithms, Linear Algebra, Software Engineering, Corporate Finance, Quantitative Analysis, Strategy and Systems, Discrete Mathemtatics, Cybersecurity
         <br/><br/>Dean's List for 5 semesters. President of InterVarsity Christian Fellowship, Club Roundnet Member
         </>,
