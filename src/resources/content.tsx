@@ -92,7 +92,10 @@ const about: About = {
     description: (
       <>
         Hi, I'm Charlie Wittemann, a UVA student working towards degrees in Computer Science and Finance.
-        In Fall 2025, I worked for the Charlottesville startup Augvu as a Full Stack Developer. This past summer, I worked for Code Platoon, teaching veterans to become software developers. <br/><br/>My professional interests lie in machine learning, leveraging modeling and data analysis to solve complex financial problems.
+        In Fall 2025, I worked for the Charlottesville startup Augvu as a Full Stack Developer. This summer, 
+        I'm working for Goldman Sachs as a Fixed Income Quantitative Strategist. 
+        <br/><br/>My professional interests lie in machine learning, leveraging modeling and data analysis 
+        to solve complex financial problems.
       </>
     ),
   },
@@ -103,10 +106,10 @@ const about: About = {
       {
         company: "Goldman Sachs",
         link: "https://www.goldmansachs.com/",
-        timeframe: "Incoming Summer 2026",
+        timeframe: "Summer 2026",
         role: "Incoming Engineering Summer Analyst -  Quantitative Strategist, SLC, USA",
         achievements: [
-          "Excited to contribute to cutting-edge financial technologies and strategies this coming summer.",
+          "-worked on fixed income attribution model.",
         ],
       },
       {
