@@ -36,6 +36,7 @@ const display: DisplayConfig = {
 const protectedRoutes: ProtectedRoutesConfig = {
   "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
   "/blog/mcintire": true,
+  "/blog/condoms_invest": true,
 };
 
 // Import and set font for each variant
