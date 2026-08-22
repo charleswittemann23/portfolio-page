@@ -110,6 +110,7 @@ const about: About = {
         role: "Incoming Engineering Summer Analyst -  Quantitative Strategist, SLC, USA",
         achievements: [
           "Worked on fixed income global risk model, redesigning parts of the factor attribution model used for $1 trillion in assets.",
+          "Wrote in proprietary quantitative scripting language, and developed custom attribution capabilities.",
         ],
       },
       {
