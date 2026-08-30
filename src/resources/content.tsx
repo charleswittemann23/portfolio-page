@@ -30,7 +30,7 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/charles-wittemann",
+    link: "https://www.linkedin.com/in/charles-wittemann/",
     essential: true,
   },
   
